@@ -8,29 +8,41 @@
     <body>
         
         <form action="procesoEdad4.php" method="post">
-            Camisa:
-            <select id="camisa" name="camisa"> 
-                <option value="seleccion1"> Seleccione </option> 
+            <?php $strNombre = filter_input(INPUT_POST, "nombre");
+$strApellido = filter_input(INPUT_POST, "apellido"); ?>
+            <input type="hidden" id="nombre" name="nombre" value="<?php echo $strNombre ?>">
+            <input type="hidden" id="apellido" name="apellido" value="<?php echo $strApellido ?>">
+            <font size=8 color="black" face="Lucida Calligraphy">Por favor escoja su atuendo </font>
+            <br><br>
+            <font size=6 color="gray" face="Lucida Calligraphy">Camisa: </font>
+            <select required id="camisa" name="camisa"> 
+                <option value=""> Seleccione </option> 
                 <option value="mcorta"> Seria manga corta </option> 
                 <option value="mlarga"> Seria manga larga </option> 
+                <option value="camisilla"> Camisilla </option> 
+                <option value="buso"> Buso </option> 
                 <option value="otra"> Otra </option> 
             </select>
             <br>
-            Pantalón:
-            <select id="pantalonH" name="pantalonH"> 
-                <option value="seleccion2"> Seleccione </option> 
+            <font size=6 color="gray" face="Lucida Calligraphy">Pantalón: </font>
+            <select required id="pantalonH" name="pantalonH"> 
+                <option value=""> Seleccione </option> 
                 <option value="ptela"> Tela </option> 
+                <option value="jean"> Jean </option>
+                <option value="pantaloneta"> Pantaloneta </option>
                 <option value="otro"> Otro </option> 
             </select>
             <br>
-            Zapatos: 
-            <select id="zapatosH" name="zapatosH"> 
-                <option value="seleccion3"> Seleccione </option> 
-                <option value="zmaterial"> Material </option> 
+            <font size=6 color="gray" face="Lucida Calligraphy">Zapatos: </font> 
+            <select required id="zapatosH" name="zapatosH"> 
+                <option value=""> Seleccione </option> 
+                <option value="zmaterial"> Material </option>
+                <option value="tenis"> Tenis </option>
+                <option value="chanclas"> Chanclas </option>
                 <option value="otro"> Otro </option> 
             </select>
             <br><br>
-            <input type="submit" value="Enviar" style="width:150px; height:60px; background-color: #E17407; color: #054B04; font-size: 25pt">
+            <input type="submit" value="Enviar">
         </form>
     </body>
 </html>

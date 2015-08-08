@@ -8,11 +8,11 @@ if ($numEdad >= 40){
     require 'genero.php';
 }
 elseif ($numEdad < 18) {
-    echo $strNombre . " " . $strApellido . " SE VA A DORMIR A SU CASA";
+    echo $strNombre . " " . $strApellido . " Se va a dormir a su casa";
 }
 elseif (($numEdad >= 18) and ($numEdad <= 21)) {
-    echo $strNombre . " " . $strApellido . " PUEDE INGRESAR A LA CHIQUITECA";
+    echo $strNombre . " " . $strApellido . " Puede ingresar a la Chiquiteca";
 }
 elseif (($numEdad >= 22) and ($numEdad <= 39)){
-echo $strNombre . " " . $strApellido . " PUEDE INGRESAR A LA DISCOTECA";
+echo $strNombre . " " . $strApellido . " Puede ingresar a la Discoteca";
 }
